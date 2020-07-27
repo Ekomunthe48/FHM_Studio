@@ -1,9 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { UncontrolledCarousel, Jumbotron, Button, Container, CardImg } from 'reactstrap';
+import { UncontrolledCarousel, Jumbotron,  CardImg } from 'reactstrap';
 import axios from 'axios'
 import effect from './js/effect'
 import './css/home.css'
-import { render } from '@testing-library/react';
 
 
 const api = 'http://localhost:3002'
@@ -75,7 +74,7 @@ const Home = () => {
                 </Jumbotron>
 
             </div>
-            {/* <script src={effect}></script> */}
+            <script src={effect}></script>
         </Fragment>
 
     )

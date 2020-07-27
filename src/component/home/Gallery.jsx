@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios'
-import { Container, Card, CardImg, Row, Col } from 'reactstrap'
+import { Container,  CardImg, Row, Col } from 'reactstrap'
 import './css/gallery.css'
 
 const api = 'http://localhost:3002'
@@ -25,7 +25,7 @@ const Gallery = () => {
             <Container className="kotak" style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
                 
                 <Row style={{ "marginTop": "15px" }}>
-                    <Col>
+                    <Col className="gambar">
                     {/* <div className="gambar"> */}
                         { showImages(images) }
                     {/* </div> */}
