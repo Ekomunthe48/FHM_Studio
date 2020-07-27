@@ -1,0 +1,38 @@
+{
+  "name": "test-apprestapi",
+  "version": "1.0.0",
+  "description": "aplikasi rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekomunthe48/apprestapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "ekomunthe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ekomunthe48/apprestapi/issues"
+  },
+  "homepage": "https://github.com/Ekomunthe48/apprestapi#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "querystring": "^0.2.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

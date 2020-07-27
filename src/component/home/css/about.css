@@ -1,0 +1,15 @@
+.tubuh{
+    background-color: rgb(24, 24, 24);
+}
+.konten{
+    margin-top : 15px;
+    padding: 15px;
+    text-align: center;
+}
+.img{
+    width: 250px;
+}
+.isi-konten{
+    text-align: justify;
+    color: rgb(217, 254, 255);
+}

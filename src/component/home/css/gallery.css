@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+.kotak{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap ;
+    margin-top: 15px;
+    
+}
+.kotak .gambar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.gambar{
+    width: 338px;
+    margin: 15px;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    
+}
+.gambar:hover{
+    opacity: 0.5;
+    width: 344px;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.gambar2{
+
+    width: 304px;
+    margin: 15px;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    
+}
+.gambar2:hover{
+    opacity: 0.5;
+    width: 319px;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.kotak h1{
+    text-align: center;
+}
+h1{
+    font-family: 'Sansita', sans-serif;
+    color: rgb(217, 254, 255);
+}

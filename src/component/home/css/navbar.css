@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&display=swap');
+
+
+.navbar{
+    background-Color: rgb(24, 24, 24);
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.logo{
+    color: rgb(217, 254, 255);
+    font-size: 25px;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    font-size: 25px;
+}
+
+.logo:hover{
+    color:rgb(179, 252, 255);
+    padding: 12px 36px;
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.navlink{
+    color: rgb(217, 254, 255);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.navlink:hover{
+    color:rgb(179, 252, 255);
+    border-radius: 40px;
+    background: linear-gradient(45deg,rgb(20, 116, 241),rgb(81, 189, 252));
+    padding: 12px 36px;
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+
+
