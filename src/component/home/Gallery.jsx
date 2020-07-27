@@ -24,14 +24,9 @@ const Gallery = () => {
             }}>Gallery</h1>
             <Container className="kotak" style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
                 
-                <Row style={{ "marginTop": "15px" }}>
-                    <Col className="gambar">
-                    {/* <div className="gambar"> */}
+                
                         { showImages(images) }
-                    {/* </div> */}
-                    </Col>
-                </Row>
-
+                    
             </Container>
             </div>
             </Fragment>

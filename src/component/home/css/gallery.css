@@ -46,3 +46,9 @@ h1{
     font-family: 'Sansita', sans-serif;
     color: rgb(217, 254, 255);
 }
+
+@media screen and (max-width:320px){
+    .gambar {
+        width: 238px;
+    }
+}
