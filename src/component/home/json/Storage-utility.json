@@ -1,0 +1,17 @@
+[
+    {
+      "origin": ["*"],
+      "method": ["GET", "OPTIONS"],
+      "responseHeader": [
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Authorization",
+        "Content-Type",
+        "Content-Length",
+        "Accept-Encoding",
+        "X-CSRF-Token"
+      ],
+      "maxAgeSeconds": 1
+    }
+  ]

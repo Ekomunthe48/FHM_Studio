@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .display-2{
 
     text-align: center;
-    color:  rgb(217, 254, 255);
+    color:  rgb(39, 41, 41);
     font-size: 4.5rem;
 }
+.slider{
+    color: rgb(35, 85, 248);
+}
 .jumbotron{ 
-    background-color: rgb(24, 24, 24);
-    margin-top: 10px;
+    background-color: rgb(39, 41, 41);
+    margin-top: 2px;
     text-align: center;
     align-items: center;
     flex-wrap: wrap ;
 
 }
 .isi{
-    color: rgb(217, 254, 255);
-    font-family: 'Sansita', sans-serif;
+    color: rgb(39, 41, 41);
+    font-family: 'Lato', sans-serif;
 }
 .button{
     position: relative;
@@ -37,30 +40,7 @@
     transition: 0.5s;
     transition-delay: 0.3s;
     color: black;
-    opacity: 0.5;
 }
 
 
 
-/* span{
-    position: absolute;
-    background: #ffffff;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation: animate 1s linear infinite;
-}
-@keyframes animate{
-    0%
-    {
-        width: 0px;
-        height: 0px;
-        opacity: 0.5;
-    }
-    100%
-    {
-        width: 500px;
-        height: 500px;
-        opacity: 0;
-    }
-} */

@@ -6,18 +6,10 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    Container
+    NavLink
 } from 'reactstrap';
 import './css/navbar.css'
 
-
-// import styled from 'styled-components';
-
-
-// const Styles = styled.div`
-    
-// `
 const NavbarComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -44,7 +36,7 @@ const NavbarComp = (props) => {
                     </Nav>
                 </Collapse>
             </Navbar>
-
+            
     )
 }
 

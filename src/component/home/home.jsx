@@ -1,65 +1,66 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { UncontrolledCarousel, Jumbotron,  CardImg } from 'reactstrap';
+import { UncontrolledCarousel, Jumbotron, CardImg } from 'reactstrap';
 import axios from 'axios'
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
 import effect from './js/effect'
 import './css/home.css'
 
-
-const api = 'http://localhost:3002'
+const api = 'http://localhost:3010'
 
 const Home = () => {
     const [images, setImages] = useState([])
 
     useEffect(() => {
         axios.get(api + '/tampil').then(res => {
-            if (res.data.status === 200) {
-                setImages(res.data.values)
-            }
+            console.log('values ', JSON.stringify(res.data))
+            setImages(res.data)
         }).catch(err => {
             alert('Aplikasi Anda Error')
         })
-    })
-
-    // const showImages = (images) => {
-    //     let res = []
-    //     for (let image of images) {
-    //         let img = image.gambar
-    //         res.push(img)
-    //     }
-    //     return res
-    // }
+    }, [])
 
     const showPict = (picts) => {
         let res = []
-        for (let pict of picts) {
-            let card = <CardImg className="gambar" src={pict.gambar} alt="Card image cap" />
-            res.push(card)
+        for (let i = 0; i < 3; i++) {
+            let pict = picts[i]
+
+            console.log('images', pict)
+            if (pict) {
+                let card = <CardImg key={pict.id} className="gambar" src={pict.picture} alt="Card image cap" />
+                res.push(card)
+            }
         }
         return res
     }
 
     const item = (items) => {
         let res = []
-        
-        for (let item of items){
-            let Aitems =
-                {   
-                    src         : item.gambar,
-                    altText     : item.judul,
-                    header      : item.judul,
-                    key         : item.id_gambar
+
+        for (let i = 0; i < 3; i++) {
+            let item = items[i]
+            if (item) {
+                let aItems =
+                {
+                    src: item.picture,
+                    altText: item.title,
+                    header: item.title,
+                    key: item.id
                 }
-        res.push(Aitems)
-        }return res
+                res.push(aItems)
+            }
+        }
+        return res
     }
+
 
     return (
         <Fragment>
-            <div className="jumbotron" style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
-                <Jumbotron style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
+            <div className="jumbotron" style={{ "backgroundColor": "rgb(255, 255, 255)" }}>
+                <Jumbotron style={{ "backgroundColor": "rgb(255, 255, 255)" }}>
                     <div className="isi">
                         <h1 className="display-2" >Welcome To FHM Studio</h1>
-                        <UncontrolledCarousel items={item(images)} className="slider" />
+                        <UncontrolledCarousel items={item(images)} style={{ "color": "rgb(35, 85, 248);" }} />
                         <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
                         <hr className="my-2" />
                         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -69,103 +70,18 @@ const Home = () => {
                     {showPict(images)}
 
                     <br />
-                    <a className="button" href="/gallery">See More</a>
+                    <Button variant="contained" color="primary"className="button" href="/gallery" disableElevation>
+                    See More
+                    </Button>
 
                 </Jumbotron>
 
             </div>
-            <script src={effect}></script>
         </Fragment>
 
     )
+
+
 };
 
-
 export default Home;
-
-
-
-
-    // class home extends Component {
-    //     constructor(props) {
-    //         super(props)
-
-    //         this.state = {
-    //             judul: [],
-    //             gambar: [],
-    //             response: '',
-    //             display: 'none',
-    //         }
-    //     }
-
-    //     componentDidMount() {
-    //         axios.get(api + '/tampil').then(res => {
-    //             this.setState({
-    //                 gambar: res.data.values
-    //             })
-    //         })
-    //     }
-
-
-
-    // render() {
-    //     const items = [
-    //         {
-    //             src: this.state.gambar.map(gambar => gambar.gambar),
-    //             altText: 'Slide 1',
-    //             caption: 'Slide 1',
-    //             header: 'Slide 1 Header',
-    //             key: '1'
-    //         },
-    //         {
-    //             src: 'https://images.unsplash.com/photo-1595480788080-b158faee4930?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    //             altText: 'Slide 2',
-    //             caption: 'Slide 2',
-    //             header: 'Slide  Header',
-    //             key: '2'
-    //         },
-
-    //         {
-    //             src: 'https://images.unsplash.com/photo-1595329003838-e84bddd3bc34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80',
-    //             altText: 'Slide 3',
-    //             caption: 'Slide 3',
-    //             header: 'Slide  Header',
-    //             key: '3'
-    //         }
-    //     ]
-    // render () {
-    //     const showImages = (images) => {
-    //         let res = []
-    //         for (let image of images) {
-    //             let card = <CardImg className="gambar" src={image.gambar} alt="Card image cap" />
-    //             res.push(card)
-    //         }
-    //         return res
-    //     }
-
-    //     return (
-    //         <Fragment>
-    //             <div className="jumbotron" style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
-    //                 <Jumbotron style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
-    //                     <div className="isi">
-    //                         <h1 className="display-2" >Welcome To FHM Studio</h1>
-    //                         <UncontrolledCarousel items={items} className="slider" />
-    //                         <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-    //                         <hr className="my-2" />
-    //                         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    //                         <br />
-    //                         <h3 style={{ "textAlign": "center" }}>Gallery</h3>
-    //                     </div>
-    //                     {showImages(images)}
-    //                     <br />
-    //                     <a className="button" href="/gallery">See More</a>
-
-    //                 </Jumbotron>
-
-    //             </div>
-    //             {/* <script src={effect}></script> */}
-    //         </Fragment>
-
-    //     )
-    // }
-    // }
