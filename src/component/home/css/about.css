@@ -1,5 +1,6 @@
 .tubuh{
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 .konten{
     margin-top : 2px;
@@ -11,5 +12,5 @@
 }
 .isi-konten{
     text-align: justify;
-    color: rgb(217, 254, 255);
+    color: rgb(39, 41, 41);
 }

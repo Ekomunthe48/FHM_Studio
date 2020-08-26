@@ -54,13 +54,12 @@ const Gallery = (props) => {
 
     return (
         <Fragment >
-            <div className='studio' style={{ "backgroundColor": "rgb(24, 24, 24)", }}>
+            <div className='studio' style={{ "backgroundColor": "rgb(255, 255, 255)", }}>
                 <h1 style={{
                     "textAlign": "center",
-                    "backgroundColor": "rgb(24, 24, 24)",
                     "marginTop": "2px"
                 }}>Gallery</h1>
-                <Container className="kotak" style={{ "backgroundColor": "rgb(24, 24, 24)" }}>
+                <Container className="kotak" style={{ "backgroundColor": "rgb(255, 255, 255)" }}>
                     {showImages(images)}
                 </Container>
             </div>
