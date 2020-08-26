@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Container, CardImg } from 'reactstrap';
 import './css/about.css'
 import gambar from './src/botot.jpg'
@@ -6,8 +6,7 @@ import ReactDOM from 'react-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import AlarmIcon from '@material-ui/icons/Alarm';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
